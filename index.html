@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestão ISO &amp; LGPD</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#/" class="brand">Gestão ISO &amp; LGPD</a>
+    <nav class="actions">
+      <button class="btn" data-action="novo-projeto">+ Novo projeto</button>
+      <button class="btn ghost" data-action="exportar" title="Baixar backup em JSON">Exportar</button>
+      <label class="btn ghost" title="Restaurar backup em JSON">
+        Importar<input type="file" id="importar" accept="application/json" hidden>
+      </label>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+
+  <dialog id="modal">
+    <form method="dialog" id="modal-form">
+      <h2 id="modal-titulo"></h2>
+      <div id="modal-corpo"></div>
+      <div class="modal-botoes">
+        <button type="button" class="btn ghost" data-action="fechar-modal">Cancelar</button>
+        <button type="submit" class="btn">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="templates.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
